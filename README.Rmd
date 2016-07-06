@@ -1,0 +1,38 @@
+---
+title: "README"
+author: "Cristina Freitas Bazzano"
+date: "July 5, 2016"
+output: html_document
+---
+
+
+# Problem
+
+
+In our analysis we are interested in the final grade of a student in Calculus I, and we know the student's major, course placed in (College Algebra, Precalculus or directly in Calculus I), grade in this course and the period his going to take Calculus I. 
+
+Assuming that the final grade is related to this previous placements, then, using Bayes' theorem, informations about the student's background can be used to more accurately assess the probability that they will have a good grade in Calculus I. 
+
+To build our model we used a training data with a normal distribution over the features, similar to how you would find in the real world. This is an example of how the fake data look like:
+
+```{r, echo=FALSE}
+train_data <- read.csv(paste(getwd(), "FakeDataComplete.csv", sep = "/"), na.strings = "")
+head(train_data)
+```
+
+# How to Execute the Model
+
+The following R library need to be installed:
+```
+install.packages("binhf")
+```
+
+Make sure that the fake data is in the same directory where you are running the model.
+
+Then simple run the script:
+```
+Rscript naiveBayesGrades.R
+```
+
+
+
